@@ -2,26 +2,36 @@
 
 <html>
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
-    <title>UOC Boilerplate</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss" />
+    <!-- do not remove this line! -->
+    <title>Home</title>
   </head>
   <body>
-    <div class="uoc-container">
+    <include src="./views/header.html"></include>
+    <main>
       <picture>
-        <source srcset="./assets/images/logo.png?as=webp&width=350" type="image/webp" />
-        <img src="./assets/images/logo.png?width=350" alt="Universitat Oberta de Catalunya" class="uoc-logo" />
+        <source
+          srcset="
+            ./assets/images/maximalfocus-HakTxidk36I-unsplash.jpg?as=webp&width=350
+          "
+          type="image/webp"
+        />
+        <img
+          src="./assets/images/maximalfocus-HakTxidk36I-unsplash.jpg?width=350"
+          alt="Alt"
+          class="alt"
+        />
       </picture>
-      <h1 class="uoc-title">Hello, UOC!</h1>
+      <h1>Name or catchy phrase here</h1>
       <p>
-        This is a starter template for the Advanced HTML and CSS Tools courses
-        from the Master's Program in Multimedia Applications and the Master's
-        Program in Web App and Website Development at the Universitat Oberta de
-        Catalunya.
+        This will be a creative front page poster made with CSS Grid.<br />
+        Maybe include links here?
       </p>
-    </div>
+    </main>
     <include src="./views/footer.html"></include>
-    <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
+    <script type="module" src="./assets/scripts/main.js"></script>
+    <!-- do not remove this line! -->
   </body>
 </html>
