@@ -19,7 +19,7 @@
   line-height: 1;
 
   @media (width <= 768px) {
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin-left: -8px;
   }
 
@@ -57,7 +57,10 @@
       font-weight: 500; // font-medium
       text-decoration: none;
       transition: all 0.15s ease-in-out;
-
+      @media (width <= 768px) {
+        font-size: 0.9rem;
+        margin-right: -8px;
+      }
       &:hover {
         color: abstracts.$secondary;
       }
