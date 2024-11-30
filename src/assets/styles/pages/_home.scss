@@ -83,6 +83,17 @@ body {
     gap: 2rem;
   }
 
+  .poster-grid__title{
+    grid-column: span 12;
+    text-decoration: underline;
+    font-family: abstracts.$font-family-righteous;
+    font-size: 2rem;
+    width: 100%;
+    display: none;
+    @media(max-width: 768px){
+      display: block;
+    }
+  }
   &__main {
     max-width: 100%;
     grid-column: span 12; // Contenedor principal
@@ -144,4 +155,33 @@ body {
       }
     }
   }
+}
+/*
+  ######################################################################################
+  SECCION Made with love
+  ######################################################################################
+*/
+.made{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background-color: abstracts.$black;
+  color: abstracts.$white;
+  font-size: 1rem;
+  a{
+    color: abstracts.$secondary;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-weight: bold;
+    font-family: abstracts.$font-family-righteous;
+    &:hover{
+      color: abstracts.$secondary;
+    }
+  }
+  i{
+    font-size: 1.5rem;
+    color: abstracts.$terciary;
+  }
+
 }

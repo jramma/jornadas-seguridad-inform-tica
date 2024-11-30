@@ -1,0 +1,92 @@
+@use "../abstracts/index" as abstracts;
+
+.footer {
+  background: abstracts.$background;
+  color: abstracts.$black;
+  overflow: hidden;
+  a {
+    text-decoration: none;
+    color: abstracts.$black;
+  }
+
+  border-top: 4px solid abstracts.$black;
+}
+
+.footer__logo {
+  font-family: abstracts.$font-family-righteous;
+  font-size: 3rem;
+  line-height: 1;
+
+  @media (max-width: 768px) {
+    font-size: 1.2rem;
+    margin-left: -8px;
+  }
+
+  a {
+    color: abstracts.$black;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: abstracts.$secondary;
+    }
+  }
+}
+
+.footer__container {
+  @include abstracts.container;
+  display: flex;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.footer__menu {
+  list-style: none;
+  display: flex;
+  align-items: center; // Asegura que todo esté centrado verticalmente
+  gap: 2rem; // Espaciado entre los elementos del menú
+  margin: 0;
+  padding: 0;
+  overflow-x: auto;
+  li {
+    a {
+      display: inline-block;
+      font-size: 1.125rem; // text-lg
+      font-weight: 500; // font-medium
+      text-decoration: none;
+      transition: all 0.15s ease-in-out;
+      color: var(--text-color);
+
+      &:hover {
+        color: var(--secondary-color);
+        text-decoration: underline;
+      }
+    }
+  }
+}
+// Estilos específicos para los iconos de redes sociales
+
+.blue {
+  background-color: abstracts.$uoc;
+}
+.footer-blue {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  @media (min-width: 768px) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  color: abstracts.$white;
+  img {
+    background: white;
+  }
+}

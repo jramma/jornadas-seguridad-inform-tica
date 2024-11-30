@@ -1,44 +1,51 @@
 <footer class="footer">
-  <!-- CONTACT -->
-  <div class="footer-contact">
-    <p>This is the footer. Should it include contact information?</p>
-  </div>
   <!-- NAV -->
-  <div class="footer-nav">
-    <p>Logo</p>
+  <div class="footer__container">
+    <!-- Logo -->
+    <div class="footer__logo">
+      <a href="/" aria-label="Inicio - Ciber Security">CSecurity</a>
+    </div>
     <nav class="nav">
-      <ul>
-        <li><a href="/">Front Page</a></li>
-        <li><a href="/pages/two">Home</a></li>
-        <li><a href="/pages/three">About</a></li>
-        <li><a href="/pages/four">Contact</a></li>
+      <ul class="footer__menu">
+        <li><a href="/" class="header__link">Home</a></li>
+        <li><a href="/pages/two" class="header__link">Speakers</a></li>
+        <li><a href="/pages/three" class="header__link">Blog</a></li>
+        <li><a href="/pages/four" class="header__link">Game</a></li>
       </ul>
     </nav>
-    <div>
-      <i>1</i>
-      <i>2</i>
-      <i>3</i>
+    <div class="icons">
+      <a href="https://github.com/jramma" target="_blank" aria-label="Facebook">
+        <i class="fa fa-github"></i>
+      </a>
+      <a href="https://jramma.com" target="_blank" aria-label="jramma">
+        <i class="fa fa-globe"></i>
+      </a>
+      <a href="https://linkedin.com/in/jramma" target="_blank" aria-label="LinkedIn">
+        <i class="fa fa-linkedin"></i>
+      </a>
     </div>
   </div>
   <!-- SECTION BLUE -->
-  <div class="footer-blue">
-    <picture>
-      <source
-        srcset="./assets/images/logo.png?as=webp&width=350"
-        type="image/webp"
-      />
-      <img
-        src="./assets/images/logo.png?width=350"
-        alt="Universitat Oberta de Catalunya"
-        class="uoc-logo"
-      />
-    </picture>
-    <p>
-      This wireframe has been created exclusively for its use within the “HTML
-      and CSS Tools II” course at the UOC’s Master Program in Website and Web
-      App Development. Its reproduction and other uses are not authorized.
-      &copy; March 2021 - Jordi Tarrida Checa and Universitat Oberta de
-      Catalunya.
-    </p>
-  </div>
+  <section class="blue">
+    <div class="footer-blue">
+      <picture>
+        <source
+          srcset="./assets/images/logo.png?as=webp&width=350"
+          type="image/webp"
+        />
+        <img
+          src="./assets/images/logo.png?width=350"
+          alt="Universitat Oberta de Catalunya"
+          class="uoc-logo"
+        />
+      </picture>
+      <p>
+        This wireframe has been created exclusively for its use within the “HTML
+        and CSS Tools II” course at the UOC’s Master Program in Website and Web
+        App Development. Its reproduction and other uses are not authorized.
+        &copy; March 2021 - Jordi Tarrida Checa and Universitat Oberta de
+        Catalunya.
+      </p>
+    </div>
+  </section>
 </footer>
