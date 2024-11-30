@@ -1,4 +1,5 @@
 @use "../abstracts/index" as abstracts;
+@use "sass:color";
 
 body {
   background: abstracts.$primary !important;
@@ -6,9 +7,9 @@ body {
 
 .home_main {
   @include abstracts.container;
+
   color: abstracts.$black;
   padding: abstracts.$spacing-unit;
-  min-height: 100vh;
 }
 
 /*
@@ -19,11 +20,11 @@ body {
 .socials {
   display: none;
 
-  @media (max-width: 768px) {
+  @media (width <= 768px) {
     display: block;
   }
 
-  &__list {
+  &-list {
     display: flex;
     justify-content: space-between;
     list-style: none;
@@ -31,10 +32,12 @@ body {
     padding: 0;
   }
 
-  &__item {
+  &-item {
     @include abstracts.card; // Aplica el mixin card desde abstracts
+
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     background-color: abstracts.$white;
+
     &:hover {
       transform: scale(abstracts.$card-hover-scale); // Efecto de alzamiento
       box-shadow: calc(abstracts.$card-shadow-offset * 1.5)
@@ -43,7 +46,7 @@ body {
     }
   }
 
-  &__link {
+  &-link {
     text-decoration: none;
     color: abstracts.$green; // Variable para texto verde
     display: flex;
@@ -51,21 +54,20 @@ body {
     align-items: center;
 
     &:hover {
-      color: darken(
-        abstracts.$green,
-        10%
-      ); // Verde ligeramente más oscuro en hover
+      color: color.adjust(abstracts.$green, $lightness: -10%);
     }
   }
 
-  &__icon {
+  &-icon {
     padding: 1.5rem;
     width: 2rem;
   }
+
   i {
     font-size: 3rem;
   }
 }
+
 /*
   ######################################################################################
   SECCION GRID
@@ -77,43 +79,47 @@ body {
   grid-template-columns: repeat(12, 1fr);
   padding: 2rem;
   align-items: start;
+
   @supports not (display: grid) {
     display: flex;
     flex-direction: column;
     gap: 2rem;
   }
 
-  .poster-grid__title{
+  .poster-grid-title {
     grid-column: span 12;
     text-decoration: underline;
     font-family: abstracts.$font-family-righteous;
     font-size: 2rem;
     width: 100%;
     display: none;
-    @media(max-width: 768px){
+
+    @media (width <= 768px) {
       display: block;
     }
   }
-  &__main {
+
+  &-main {
     max-width: 100%;
     grid-column: span 12; // Contenedor principal
     display: grid;
     grid-template-columns: repeat(12, 1fr); // Ajustado al diseño en columnas
 
-    @media (max-width: 768px) {
+    @media (width <= 768px) {
       grid-template-columns: 1fr; // Una columna en pantallas pequeñas
     }
 
     .box {
       margin-bottom: auto;
       margin-right: 2rem;
-      @media (max-width: 768px) {
+
+      @media (width <= 768px) {
         margin-right: 0;
         margin-bottom: 2rem;
       }
 
       h2 {
-        font-size: 3rem;
+        font-size: 2rem;
         margin-bottom: 1rem;
         width: 100%;
         word-wrap: break-word;
@@ -122,6 +128,7 @@ body {
         line-height: 1.2;
         font-family: abstracts.$font-family-righteous;
       }
+
       p {
         font-size: 1rem;
         margin-bottom: 1rem;
@@ -129,39 +136,46 @@ body {
 
       &.green-card {
         @include abstracts.card;
+
         grid-column: span 4;
         background-color: abstracts.$secondary;
-        @media (max-width: 768px) {
+
+        @media (width <= 768px) {
           grid-column: span 12;
         }
       }
 
       &.transp-card {
         @include abstracts.card;
+
         grid-column: span 4;
         background-color: transparent;
-        @media (max-width: 768px) {
+
+        @media (width <= 768px) {
           grid-column: span 12;
         }
       }
 
       &.cian-card {
         @include abstracts.card;
+
         grid-column: span 3;
         background-color: abstracts.$terciary;
-        @media (max-width: 768px) {
+
+        @media (width <= 768px) {
           grid-column: span 12;
         }
       }
     }
   }
 }
+
 /*
   ######################################################################################
   SECCION Made with love
   ######################################################################################
 */
-.made{
+.made {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -169,19 +183,21 @@ body {
   background-color: abstracts.$black;
   color: abstracts.$white;
   font-size: 1rem;
-  a{
+
+  a {
     color: abstracts.$secondary;
     text-decoration: none;
     transition: color 0.3s ease;
     font-weight: bold;
     font-family: abstracts.$font-family-righteous;
-    &:hover{
+
+    &:hover {
       color: abstracts.$secondary;
     }
   }
-  i{
+
+  i {
     font-size: 1.5rem;
     color: abstracts.$terciary;
   }
-
 }

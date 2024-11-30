@@ -1,6 +1,5 @@
 @use "../abstracts/index" as abstracts;
 
-
 .header {
   background: abstracts.$background;
   color: abstracts.$black;
@@ -14,12 +13,12 @@
   border-bottom: 4px solid abstracts.$black;
 }
 
-.header__logo {
+.header-logo {
   font-family: abstracts.$font-family-righteous;
   font-size: 3rem;
   line-height: 1;
 
-  @media (max-width: 768px) {
+  @media (width <= 768px) {
     font-size: 1.2rem;
     margin-left: -8px;
   }
@@ -34,20 +33,20 @@
   }
 }
 
-.header__container {
-  @include abstracts.container;
+.header-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-top: 1rem;
   padding-bottom: 1rem;
+  @include abstracts.container;
 }
 
-.header__menu {
-  list-style: none;
+.header-menu {
   display: flex;
-  align-items: center; // Asegura que todo esté centrado verticalmente
-  gap: 2rem; // Espaciado entre los elementos del menú
+  list-style: none;
+  align-items: center;
+  gap: 2rem;
   margin: 0;
   padding: 0;
 
@@ -58,27 +57,25 @@
       font-weight: 500; // font-medium
       text-decoration: none;
       transition: all 0.15s ease-in-out;
-      color: var(--text-color);
 
       &:hover {
-        color: var(--secondary-color);
-        text-decoration: underline;
+        color: abstracts.$secondary;
       }
     }
   }
 
   // Estilos específicos para los iconos de redes sociales
-  .header__social {
+  .header-social {
     a {
       font-size: 1.5rem; // Tamaño más grande para los iconos
       transition: color 0.3s ease;
 
       &:hover {
-        color: var(--secondary-color);
+        color: abstracts.$secondary;
       }
     }
 
-    @media (max-width: 768px) {
+    @media (width <= 768px) {
       display: none; // Oculta los iconos en pantallas pequeñas
     }
   }

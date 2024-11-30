@@ -1,9 +1,11 @@
 @use "../abstracts/index" as abstracts;
 
 .footer {
+  margin-top: 4rem;
   background: abstracts.$background;
   color: abstracts.$black;
   overflow: hidden;
+
   a {
     text-decoration: none;
     color: abstracts.$black;
@@ -12,12 +14,12 @@
   border-top: 4px solid abstracts.$black;
 }
 
-.footer__logo {
+.footer-logo {
   font-family: abstracts.$font-family-righteous;
   font-size: 3rem;
   line-height: 1;
 
-  @media (max-width: 768px) {
+  @media (width <= 768px) {
     font-size: 1.2rem;
     margin-left: -8px;
   }
@@ -32,20 +34,23 @@
   }
 }
 
-.footer__container {
+.footer-container {
   @include abstracts.container;
+
   display: flex;
-  @media (max-width: 768px) {
+
+  @media (width <= 768px) {
     flex-direction: column;
     gap: 2rem;
   }
+
   justify-content: space-between;
   align-items: center;
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
 
-.footer__menu {
+.footer-menu {
   list-style: none;
   display: flex;
   align-items: center; // Asegura que todo esté centrado verticalmente
@@ -53,6 +58,7 @@
   margin: 0;
   padding: 0;
   overflow-x: auto;
+
   li {
     a {
       display: inline-block;
@@ -74,18 +80,22 @@
 .blue {
   background-color: abstracts.$uoc;
 }
+
 .footer-blue {
   padding-top: 2rem;
   padding-bottom: 2rem;
   display: flex;
   gap: 2rem;
   flex-direction: column;
-  @media (min-width: 768px) {
+
+  @media (width >= 768px) {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
   }
+
   color: abstracts.$white;
+
   img {
     background: white;
   }

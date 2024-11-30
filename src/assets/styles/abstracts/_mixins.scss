@@ -1,4 +1,5 @@
 @use "variables" as vars;
+@use "sass:map";
 
 @mixin container() {
   width: 100%;
@@ -9,7 +10,7 @@
 
   @each $breakpoint, $container-width in vars.$container-max-widths {
     // Usar la función map-get para obtener los valores del breakpoint del mapa de breakpoints
-    @media (min-width: map-get(vars.$grid-breakpoints, $breakpoint)) {
+    @media (min-width: map.get(vars.$grid-breakpoints, $breakpoint)) {
       max-width: $container-width;
     }
   }
@@ -22,12 +23,17 @@
   background-color: transparent; // Sin fondo por defecto
 
   // Sombra brutalista
-  box-shadow: vars.$card-shadow-offset vars.$card-shadow-offset vars.$card-shadow-blur vars.$card-shadow-color;
-
+  box-shadow: vars.$card-shadow-offset vars.$card-shadow-offset
+    vars.$card-shadow-blur vars.$card-shadow-color;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 
   &:hover {
-    transform: scale(vars.$card-hover-scale); // Escala para efecto de alzamiento
-    box-shadow: calc(vars.$card-shadow-offset * 1.5) calc( vars.$card-shadow-offset * 1.5) vars.$card-shadow-blur vars.$card-shadow-color;
+    transform: scale(
+      vars.$card-hover-scale
+    ); // Escala para efecto de alzamiento
+
+    box-shadow: calc(vars.$card-shadow-offset * 1.5)
+      calc(vars.$card-shadow-offset * 1.5) vars.$card-shadow-blur
+      vars.$card-shadow-color;
   }
 }

@@ -37,7 +37,7 @@ $btn-hover-bg-shade: color.adjust($secondary, $lightness: 10%);
 
 // Tipografía
 $font-family-main: "Poppins", sans-serif; // Comillas simples
-$font-family-serif: DM Serif Text, '_font_fallback_1475944324181', serif;
+$font-family-serif: dm serif text, '_font_fallback_1475944324181', serif;
 $font-family-righteous: "Righteous", "_font_fallback_1499220222612", sans-serif;
 
 // Espaciado
@@ -69,7 +69,7 @@ $card-padding-y: 0.5rem;
 $card-border-width: 2px;
 $card-border-color: $black;
 $card-radius: $border-radius;
-$card-shadow-color: rgba(0, 0, 0, 1);
+$card-shadow-color: rgb(0 0 0 / 100%);
 $card-shadow-offset: 7px;
 $card-shadow-blur: 0;
 $card-hover-scale: 1.05;
