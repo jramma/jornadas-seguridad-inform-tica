@@ -33,17 +33,22 @@ src/
 │   ├── header.html        # Encabezado
 │   ├── footer.html        # Pie de página
 │   └── card.html          # Tarjeta reutilizable
-├── styles/                # Estilos SCSS o CSS
-│   ├── main.scss          # Estilos globales
-│   ├── _variables.scss    # Variables compartidas
-│   ├── pages/             # Estilos específicos de páginas
-│   │   ├── about.scss
-│   │   ├── contact.scss
-│   │   └── projects.scss
-│   └── components/        # Estilos específicos de componentes
-│       ├── header.scss
-│       ├── footer.scss
-│       └── card.scss
+├── styles/
+│   ├── abstracts/   // Variables, mixins, functions
+│   │   ├── _variables.scss
+│   │   ├── _mixins.scss
+│   │   ├── _functions.scss
+│   ├── base/        // Reset, global styles
+│   │   ├── _reset.scss
+│   │   ├── _typography.scss
+│   ├── components/  // Buttons, cards, forms
+│   │   ├── _button.scss
+│   │   ├── _card.scss
+│   ├── layout/      // Grid, containers, sections
+│   │   ├── _grid.scss
+│   │   ├── _header.scss
+│   ├── main.scss    // Archivo principal
+│   └── _variables.scss
 ├── scripts/               # Scripts de JavaScript
 │   ├── main.js            # Archivo principal JS
 │   ├── navigation.js      # Script para la navegación

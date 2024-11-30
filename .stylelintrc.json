@@ -1,0 +1,34 @@
+{
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-config-recommended-scss",
+    "stylelint-config-standard-scss"
+  ],
+  "rules": {
+    "color-hex-length": null,
+    "color-no-invalid-hex": true,
+    "selector-max-id": 0,
+    "declaration-no-important": true,
+    "max-nesting-depth": 3,
+    "no-duplicate-selectors": true,
+    "block-no-empty": true,
+    "property-no-vendor-prefix": true,
+    "unit-allowed-list": [
+      "em",
+      "rem",
+      "%",
+      "s",
+      "px",
+      "vh",
+      "vw",
+      "fr"
+    ],
+    "color-function-notation": "modern",
+    "font-family-no-missing-generic-family-keyword": true,
+    "length-zero-no-unit": true,
+    "scss/at-mixin-pattern": "^_?[a-z0-9\\-]+$",
+    "scss/at-extend-no-missing-placeholder": true,
+    "scss/dollar-variable-pattern": "^[a-z0-9\\-]+$",
+    "scss/percent-placeholder-pattern": "^[a-z0-9\\-]+$"
+  }
+}

@@ -1,0 +1,64 @@
+@use "sass:color"; // Importar el módulo de Sass para trabajar con colores
+
+$primary-color: #333;
+$primary: #F472B6;
+$secondary: #a3e635;
+$terciary: #34d399;
+$accent-color: #4ade80;
+$background: #ffffff;
+$white: #f1f1f1;
+$black: #0f0f0f;
+$text: #000000;
+// Sobrescribe las variables de Bootstrap
+$enable-dark-mode: false; // Evita cargar "variables-dark"
+$gray-100: #f8f9fa !default;
+$white: #ffffff !default;
+$light-bg-subtle: color.mix($gray-100, $white, 50%) !default;
+
+// Configura los breakpoints para evitar errores con `_assert-ascending`
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+) !default;
+
+// Modificar los botones
+$btn-padding-y: 0.75rem;
+$btn-padding-x: 1.5rem;
+$btn-border-radius: 5px;
+$btn-hover-bg-shade: color.adjust(
+  $secondary,
+  $lightness: 10%
+);
+
+// Tipografía
+$font-family-main: "Poppins", sans-serif; // Comillas simples
+$font-family-alt: "Roboto Mono", monospace; // Comillas simples
+$font-family-sans: "blinkmacsystemfont", "roboto", "arial", sans-serif;
+$font-family-righteous: "Righteous", '_font_fallback_1499220222612', sans-serif;
+
+// Espaciado
+$spacing-unit: 1rem;
+
+// Border-radius para formas estilizadas
+$border-radius: 5px;
+$social-icon-size: 1.5rem;
+$nav-gap: 2rem;
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+);
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px
+) !default;

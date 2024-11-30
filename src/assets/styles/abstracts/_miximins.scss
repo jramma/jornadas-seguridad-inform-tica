@@ -1,0 +1,16 @@
+@use "../abstracts/variables" as vars;
+
+@mixin container() {
+  width: 100%;
+  padding-right: var(--container-padding, 1rem);
+  padding-left: var(--container-padding, 1rem);
+  margin-right: auto;
+  margin-left: auto;
+
+  @each $breakpoint, $container-width in vars.$container-max-widths {
+    // Usar la función map-get para obtener los valores del breakpoint del mapa de breakpoints
+    @media (min-width: map-get(vars.$grid-breakpoints, $breakpoint)) {
+      max-width: $container-width;
+    }
+  }
+}
