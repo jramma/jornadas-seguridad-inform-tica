@@ -1,0 +1,12 @@
+@use "../abstracts/index" as abstracts;
+
+.card {
+  @include abstracts.card;
+}
+
+section {
+  @include abstracts.container;
+
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}

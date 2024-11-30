@@ -1,7 +1,7 @@
 @use "sass:color"; // Importar el módulo de Sass para trabajar con colores
 
 $primary-color: #333;
-$primary: #F472B6;
+$primary: #f472b6;
 $secondary: #a3e635;
 $terciary: #34d399;
 $accent-color: #4ade80;
@@ -9,6 +9,9 @@ $background: #ffffff;
 $white: #f1f1f1;
 $black: #0f0f0f;
 $text: #000000;
+$green: #10b981;
+$border-radius: 8px;
+
 // Sobrescribe las variables de Bootstrap
 $enable-dark-mode: false; // Evita cargar "variables-dark"
 $gray-100: #f8f9fa !default;
@@ -22,23 +25,19 @@ $grid-breakpoints: (
   md: 768px,
   lg: 992px,
   xl: 1200px,
-  xxl: 1400px
+  xxl: 1400px,
 ) !default;
 
 // Modificar los botones
 $btn-padding-y: 0.75rem;
 $btn-padding-x: 1.5rem;
 $btn-border-radius: 5px;
-$btn-hover-bg-shade: color.adjust(
-  $secondary,
-  $lightness: 10%
-);
+$btn-hover-bg-shade: color.adjust($secondary, $lightness: 10%);
 
 // Tipografía
 $font-family-main: "Poppins", sans-serif; // Comillas simples
-$font-family-alt: "Roboto Mono", monospace; // Comillas simples
-$font-family-sans: "blinkmacsystemfont", "roboto", "arial", sans-serif;
-$font-family-righteous: "Righteous", '_font_fallback_1499220222612', sans-serif;
+$font-family-serif: DM Serif Text, '_font_fallback_1475944324181', serif;
+$font-family-righteous: "Righteous", "_font_fallback_1499220222612", sans-serif;
 
 // Espaciado
 $spacing-unit: 1rem;
@@ -60,5 +59,16 @@ $container-max-widths: (
   md: 720px,
   lg: 960px,
   xl: 1140px,
-  xxl: 1320px
+  xxl: 1320px,
 ) !default;
+
+// Variables para la Card
+$card-padding-x: 1rem;
+$card-padding-y: 0.5rem;
+$card-border-width: 2px;
+$card-border-color: $black;
+$card-radius: $border-radius;
+$card-shadow-color: rgba(0, 0, 0, 1);
+$card-shadow-offset: 7px;
+$card-shadow-blur: 0;
+$card-hover-scale: 1.05;

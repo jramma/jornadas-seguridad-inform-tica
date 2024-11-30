@@ -1,44 +1,85 @@
-@use "../abstracts/variables" as vars;
-@use "../abstracts/miximins" as mixins;
+@use "../abstracts/index" as abstracts;
+
 
 .header {
-  background: vars.$background;
-  color: vars.$black;
-  padding: vars.$spacing-unit;
+  background: abstracts.$background;
+  color: abstracts.$black;
+  padding: abstracts.$spacing-unit;
+
   a {
     text-decoration: none;
-    color: vars.$black;
+    color: abstracts.$black;
   }
-  border-bottom: 4px solid vars.$black;
+
+  border-bottom: 4px solid abstracts.$black;
 }
-.header__logo{
-  font-family: vars.$font-family-righteous;
+
+.header__logo {
+  font-family: abstracts.$font-family-righteous;
   font-size: 3rem;
   line-height: 1;
+
+  @media (max-width: 768px) {
+    font-size: 1.2rem;
+    margin-left: -8px;
+  }
+
   a {
-    color: vars.$black;
+    color: abstracts.$black;
     transition: color 0.3s ease;
+
     &:hover {
-      color: vars.$secondary;
+      color: abstracts.$secondary;
     }
   }
 }
 
 .header__container {
-  @include mixins.container;
+  @include abstracts.container;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
+
 .header__menu {
   list-style: none;
   display: flex;
-  align-items: center;
-  gap: vars.$spacing-unit;
-}
-.header__nav{
-  display: flex;
-  gap: vars.$spacing-unit;
+  align-items: center; // Asegura que todo esté centrado verticalmente
+  gap: 2rem; // Espaciado entre los elementos del menú
+  margin: 0;
+  padding: 0;
+
+  li {
+    a {
+      display: inline-block;
+      font-size: 1.125rem; // text-lg
+      font-weight: 500; // font-medium
+      text-decoration: none;
+      transition: all 0.15s ease-in-out;
+      color: var(--text-color);
+
+      &:hover {
+        color: var(--secondary-color);
+        text-decoration: underline;
+      }
+    }
+  }
+
+  // Estilos específicos para los iconos de redes sociales
+  .header__social {
+    a {
+      font-size: 1.5rem; // Tamaño más grande para los iconos
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: var(--secondary-color);
+      }
+    }
+
+    @media (max-width: 768px) {
+      display: none; // Oculta los iconos en pantallas pequeñas
+    }
+  }
 }
