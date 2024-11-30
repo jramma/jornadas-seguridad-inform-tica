@@ -20,17 +20,33 @@
   padding: vars.$card-padding-y vars.$card-padding-x;
   border: vars.$card-border-width solid vars.$card-border-color;
   border-radius: vars.$card-radius;
-  background-color: transparent; // Sin fondo por defecto
-
-  // Sombra brutalista
+  background-color: transparent;
+  transition: all 0.3s ease-in-out;
   box-shadow: vars.$card-shadow-offset vars.$card-shadow-offset
     vars.$card-shadow-blur vars.$card-shadow-color;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 
   &:hover {
-    transform: scale(
-      vars.$card-hover-scale
-    ); // Escala para efecto de alzamiento
+    transition: all 0.3s ease-in-out;
+    transform: scale(vars.$card-hover-scale);
+    box-shadow: calc(vars.$card-shadow-offset * 1.5)
+      calc(vars.$card-shadow-offset * 1.5) vars.$card-shadow-blur
+      vars.$card-shadow-color;
+  }
+}
+
+@mixin button {
+  padding: vars.$card-padding-y vars.$card-padding-x;
+  border: vars.$card-border-width solid vars.$card-border-color;
+  border-radius: 0;
+  background-color: transparent;
+
+  box-shadow: vars.$card-shadow-offset vars.$card-shadow-offset
+    vars.$card-shadow-blur vars.$card-shadow-color;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    transform: scale(vars.$card-hover-scale);
 
     box-shadow: calc(vars.$card-shadow-offset * 1.5)
       calc(vars.$card-shadow-offset * 1.5) vars.$card-shadow-blur

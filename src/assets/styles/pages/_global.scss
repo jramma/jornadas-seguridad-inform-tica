@@ -25,3 +25,12 @@ body {
   font-family: abstracts.$font-family-serif;
 
 }
+button{
+  @include abstracts.button;
+  background-color: abstracts.$white;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    font-weight: bold;
+    background-color: abstracts.$secondary;
+  }
+}
