@@ -1,0 +1,69 @@
+<article class="article_main">
+  <h2 class="mb-4"><if condition="title">{{title}}</if></h2>
+  <if condition="paragraph1">
+    <p>{{paragraph1}}</p>
+  </if>
+  <if condition="paragraph2">
+    <p>{{paragraph2}}</p>
+  </if>
+  <if condition="img1">
+    <img src="{{img1.src}}" alt="{{img1.alt}}" class="img-fluid rounded my-3" />
+  </if>
+  <if condition="blockquote">
+    <blockquote class="blockquote my-4">
+      “{{blockquote.text}}” — {{blockquote.author}}
+    </blockquote>
+  </if>
+  <if condition="paragraph3">
+    <p>{{paragraph3}}</p>
+  </if>
+  <if condition="paragraph4">
+    <p>{{paragraph4}}</p>
+  </if>
+  <if condition="img2">
+    <img src="{{img2.src}}" alt="{{img2.alt}}" class="img-fluid rounded my-3" />
+  </if>
+  <h3>Agenda del Evento</h3>
+  <if condition="agenda1">
+    <ol>
+      <if condition="agenda1">
+        <li>{{agenda1.time}} - {{agenda1.activity}}</li>
+      </if>
+      <if condition="agenda2">
+        <li>{{agenda2.time}} - {{agenda2.activity}}</li>
+      </if>
+      <if condition="agenda3">
+        <li>{{agenda3.time}} - {{agenda3.activity}}</li>
+      </if>
+      <if condition="agenda4">
+        <li>{{agenda4.time}} - {{agenda4.activity}}</li>
+      </if>
+      <if condition="agenda5">
+        <li>{{agenda5.time}} - {{agenda5.activity}}</li>
+      </if>
+    </ol>
+  </if>
+  <if condition="credits === 'true'">
+    <p class="credits">
+      Foto de
+      <a
+        href="https://unsplash.com/es/@pathum_danthanarayana?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+        >Pathum Danthanarayana</a
+      >
+      en
+      <a
+        href="https://unsplash.com/es/fotos/encendio-el-telefono-inteligente-android-t8TOMKe6xZU?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+        >Unsplash</a
+      >.<br/> Foto de
+      <a
+        href="https://unsplash.com/es/@masakaze?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+        >Masakaze Kawakami</a
+      >
+      en
+      <a
+        href="https://unsplash.com/es/fotos/telefono-inteligente-android-sony-xperia-negro-kknrCfZHsyo?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+        >Unsplash</a
+      >.
+    </p>
+  </if>
+</article>

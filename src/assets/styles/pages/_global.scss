@@ -34,3 +34,10 @@ button{
     background-color: abstracts.$secondary;
   }
 }
+.wrap{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  align-items: start;
+  gap: 2rem;
+}

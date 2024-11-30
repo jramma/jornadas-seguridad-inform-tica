@@ -1,1 +1,69 @@
-// Añadir estilos aquí
+@use "../abstracts/index" as abstracts;
+@use "sass:color";
+@use "sass:math";
+
+article {
+  max-width: 30rem;
+  padding: 2rem;
+  background-color: abstracts.$background;
+  border: 1px solid abstracts.$border-color;
+  border-radius: abstracts.$border-radius;
+
+  h2,
+  h3 {
+    font-family: abstracts.$font-family-righteous;
+    color: abstracts.$black;
+    margin-bottom: abstracts.$spacing-unit;
+
+    :where(h2, h3) {
+      border-bottom: 2px solid abstracts.$terciary;
+      padding-bottom: math.div(abstracts.$spacing-unit, 2);
+    }
+  }
+
+  blockquote {
+    border-left: 5px solid abstracts.$primary;
+    padding-left: abstracts.$spacing-unit;
+    color: abstracts.$text;
+    font-style: italic;
+    margin: abstracts.$spacing-unit 0;
+
+    // Cambia el estilo si contiene un párrafo
+    :has(p) {
+      font-weight: bold;
+      background-color: color.scale(
+        abstracts.$primary,
+        $lightness: 80% // Parámetro correcto para color.scale
+      );
+      padding: abstracts.$spacing-unit;
+    }
+  }
+
+  ol {
+    padding-left: math.div(abstracts.$spacing-unit, 2) * 2;
+
+    // Aplica estilos a elementos específicos en la lista
+    :is(li:first-child, li:last-child) {
+      font-weight: bold;
+      color: abstracts.$secondary;
+    }
+
+    li {
+      margin-bottom: math.div(abstracts.$spacing-unit, 2);
+    }
+  }
+
+  p {
+    font-size: abstracts.$spacing-unit;
+    line-height: 1.6;
+    margin-bottom: abstracts.$spacing-unit;
+    color: abstracts.$text;
+  }
+
+  img {
+    max-width: 100%;
+    border-radius: abstracts.$border-radius;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: abstracts.$spacing-unit 0;
+  }
+}
