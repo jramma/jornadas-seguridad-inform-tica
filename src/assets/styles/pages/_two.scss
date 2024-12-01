@@ -13,7 +13,7 @@
   padding-bottom: 4rem;
 }
 
-@media (max-width: 1024px) {
+@media (width <= 1024px) {
   .speakers-grid {
     grid-template-columns: repeat(
       2,
@@ -22,7 +22,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (width <= 768px) {
   .speakers-grid {
     grid-template-columns: 1fr; /* 1 columna en pantallas pequeñas */
   }
@@ -52,6 +52,7 @@
     font-size: 1rem;
   }
 }
+
 .speakers-footer {
   text-align: center;
   padding-top: 2rem;

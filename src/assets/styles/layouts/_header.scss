@@ -8,6 +8,11 @@
   a {
     text-decoration: none;
     color: abstracts.$black;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: abstracts.$secondary;
+    }
   }
 
   border-bottom: 4px solid abstracts.$black;
@@ -22,15 +27,6 @@
     font-size: 1rem;
     margin-left: -8px;
   }
-
-  a {
-    color: abstracts.$black;
-    transition: color 0.3s ease;
-
-    &:hover {
-      color: abstracts.$secondary;
-    }
-  }
 }
 
 .header-container {
@@ -39,6 +35,7 @@
   align-items: center;
   padding-top: 1rem;
   padding-bottom: 1rem;
+
   @include abstracts.container;
 }
 
@@ -51,35 +48,24 @@
   padding: 0;
 
   li {
-    a {
-      display: inline-block;
-      font-size: 1.125rem; // text-lg
-      font-weight: 500; // font-medium
-      text-decoration: none;
-      transition: all 0.15s ease-in-out;
-      @media (width <= 768px) {
-        font-size: 0.9rem;
-        margin-right: -8px;
-      }
-      &:hover {
-        color: abstracts.$secondary;
-      }
+    display: inline-block;
+    font-size: 1.125rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.15s ease-in-out;
+
+    @media (width <= 768px) {
+      font-size: 0.9rem;
+      margin-right: -8px;
     }
   }
 
-  // Estilos específicos para los iconos de redes sociales
   .header-social {
-    a {
-      font-size: 1.5rem; // Tamaño más grande para los iconos
-      transition: color 0.3s ease;
-
-      &:hover {
-        color: abstracts.$secondary;
-      }
-    }
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
 
     @media (width <= 768px) {
-      display: none; // Oculta los iconos en pantallas pequeñas
+      display: none;
     }
   }
 }

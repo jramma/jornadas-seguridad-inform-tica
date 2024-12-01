@@ -16,15 +16,16 @@
   padding-bottom: 1rem;
 
   @include abstracts.container;
+
   @media (width <= 768px) {
     flex-direction: column;
     gap: 2rem;
   }
 
-
   i {
     font-size: 2rem;
   }
+
   a {
     display: inline-block;
     font-size: 1.125rem;
@@ -32,6 +33,7 @@
     text-decoration: none;
     transition: all 0.15s ease-in-out;
     color: abstracts.$black;
+
     &:hover {
       color: abstracts.$secondary;
       text-decoration: none;
@@ -52,12 +54,9 @@
 .footer-logo {
   font-family: abstracts.$font-family-righteous;
   line-height: 1;
-
-  a {
-    font-size: 2rem;
-    color: abstracts.$black;
-  }
+  font-size: 2rem;
 }
+
 /*
   ######################################################################################
   Footer UOC
@@ -80,6 +79,7 @@
     justify-content: space-between;
     align-items: center;
   }
+
   img {
     background: white;
   }

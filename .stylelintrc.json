@@ -20,7 +20,11 @@
       "px",
       "vh",
       "vw",
-      "fr"
+      "fr",
+      "dvmin",
+      "lvmin",
+      "svmin",
+      "cqmin"
     ],
     "color-function-notation": "modern",
     "font-family-no-missing-generic-family-keyword": true,

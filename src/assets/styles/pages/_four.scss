@@ -7,7 +7,7 @@
   --text-color: color(display-p3 0.9 0.9 0.9);
   --highlight-color: color(display-p3 0.8 0.3 0.1);
   --accent-color: color(display-p3 0.2 0.8 0.5);
-  --shadow-color: color(display-p3 0.05 0.05 0.05 / 0.5);
+  --shadow-color: color(display-p3 0.05 0.05 0.05 / 50%);
   --button-hover: color(display-p3 0.6 0.2 0.9);
 }
 
@@ -89,6 +89,7 @@
   background-color: var(--button-hover);
   transform: scale(1.05);
 }
+
 /* Modal para imágenes */
 .image-modal {
   display: none; /* Oculto por defecto */
@@ -98,7 +99,7 @@
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.9); /* Fondo semitransparente */
+  background-color: rgb(0 0 0 / 90%); /* Fondo semitransparente */
   align-items: center;
   justify-content: center;
   opacity: 0;
@@ -126,7 +127,7 @@
   transition: transform 0.3s ease, opacity 0.3s ease 0.1s;
   object-fit: contain;
 
-  @media (max-width: 768px) {
+  @media (width <= 768px) {
     padding-left: 23lvmin;
   }
 }
@@ -153,7 +154,7 @@
 }
 
 /* Media query para mejorar en pantallas pequeñas */
-@media (max-width: 768px) {
+@media (width <= 768px) {
   .image-modal .modal-content {
     max-width: 95%; /* Más ancho en móviles */
     max-height: 85%; /* Limita la altura para que no desborde */
