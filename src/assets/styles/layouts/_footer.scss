@@ -9,19 +9,18 @@
 }
 
 .footer-container {
-  @include abstracts.container;
-
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 
+  @include abstracts.container;
   @media (width <= 768px) {
     flex-direction: column;
     gap: 2rem;
   }
 
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
 
   i {
     font-size: 2rem;
@@ -74,15 +73,13 @@
   display: flex;
   gap: 2rem;
   flex-direction: column;
+  color: abstracts.$white;
 
   @media (width >= 768px) {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
   }
-
-  color: abstracts.$white;
-
   img {
     background: white;
   }

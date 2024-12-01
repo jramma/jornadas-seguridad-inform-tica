@@ -115,19 +115,20 @@
 }
 
 .image-modal .modal-content {
-  @media (max-width: 768px) {
-    padding-left: 23lvmin;
-  }
+  max-width: 90%;
+  max-height: 90%;
   margin: auto;
   display: block;
-  max-width: 90%;
-  max-height: 90%; /* Limita el tamaño en móviles */
   border-radius: 1cqmin;
   box-shadow: 0 4svmin 8svmin var(--shadow-color);
   transform: translateY(-20px);
   opacity: 0;
   transition: transform 0.3s ease, opacity 0.3s ease 0.1s;
   object-fit: contain;
+
+  @media (max-width: 768px) {
+    padding-left: 23lvmin;
+  }
 }
 
 .image-modal.show .modal-content {

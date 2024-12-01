@@ -5,9 +5,10 @@
 }
 
 section {
-  @include abstracts.container;
   padding-top: 2rem;
   padding-bottom: 2rem;
+
+  @include abstracts.container;
 }
 
 h2 {

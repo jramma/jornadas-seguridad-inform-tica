@@ -6,10 +6,10 @@ body {
 }
 
 .home_main {
-  @include abstracts.container;
-
   color: abstracts.$black;
   padding: abstracts.$spacing-unit;
+
+  @include abstracts.container;
 }
 
 /*
@@ -33,22 +33,22 @@ body {
   }
 
   &-item {
-    @include abstracts.card; // Aplica el mixin card desde abstracts
+    @include abstracts.card;
 
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     background-color: abstracts.$white;
 
     &:hover {
-      transform: scale(abstracts.$card-hover-scale); // Efecto de alzamiento
+      transform: scale(abstracts.$card-hover-scale);
       box-shadow: calc(abstracts.$card-shadow-offset * 1.5)
         calc(abstracts.$card-shadow-offset * 1.5) abstracts.$card-shadow-blur
-        abstracts.$card-shadow-color; // Sombra más pronunciada en hover
+        abstracts.$card-shadow-color;
     }
   }
 
   &-link {
     text-decoration: none;
-    color: abstracts.$green; // Variable para texto verde
+    color: abstracts.$green;
     display: flex;
     justify-content: center;
     align-items: center;
