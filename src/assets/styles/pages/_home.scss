@@ -16,7 +16,7 @@
 .socials {
   display: none;
 
-  @media (max-width: 768px) {
+  @media (width <= 768px) {
     display: block;
   }
 
@@ -89,7 +89,7 @@
     width: 100%;
     display: none;
 
-    @media (max-width: 768px) {
+    @media (width <= 768px) {
       display: block;
     }
   }
@@ -110,7 +110,7 @@
       margin-bottom: auto;
       margin-right: 2rem;
 
-      @media (max-width: 768px) {
+      @media (width <= 768px) {
         margin-right: 0;
         margin-bottom: 2rem;
       }
@@ -133,13 +133,14 @@
     }
   }
 }
+
 .green-card {
   @include abstracts.card;
 
   grid-column: span 4;
   background-color: abstracts.$secondary;
 
-  @media (max-width: 768px) {
+  @media (width <= 768px) {
     grid-column: span 12;
   }
 }
@@ -150,18 +151,19 @@
   grid-column: span 4;
   background-color: transparent;
 
-  @media (max-width: 768px) {
+  @media (width <= 768px) {
     grid-column: span 12;
   }
 }
 
 .cian-card {
   margin-right: 0;
-  @include abstracts.card;
   grid-column: 10 / span 3;
   background-color: abstracts.$terciary;
 
-  @media (max-width: 768px) {
+  @include abstracts.card;
+
+  @media (width <= 768px) {
     grid-column: span 12;
   }
 }
