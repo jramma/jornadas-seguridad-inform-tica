@@ -55,7 +55,7 @@
   <body>
     <include src="./views/header.html"></include>
     <main class="home_main">
-      <div class="wrap">
+      <section class="wrap">
         <include src="./components/post.html"
           >{ "title": "Sobre el Concurso", "paragraph1": "El Concurso de
           Ciberseguridad es un evento anual diseñado para estudiantes y
@@ -114,7 +114,9 @@
           "time": "16:00", "activity": "Preguntas y respuestas con
           desarrolladores de GrapheneOS" }, "credits": "true" }</include
         >
-      </div>
+      </section>
+      <include src="./components/made.html"></include>
+
     </main>
     <include src="./views/footer.html"></include>
     <script type="module" src="./assets/scripts/main.js"></script>

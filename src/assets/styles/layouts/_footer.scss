@@ -5,33 +5,7 @@
   background: abstracts.$background;
   color: abstracts.$black;
   overflow: hidden;
-
-  a {
-    text-decoration: none;
-    color: abstracts.$black;
-  }
-
   border-top: 4px solid abstracts.$black;
-}
-
-.footer-logo {
-  font-family: abstracts.$font-family-righteous;
-  font-size: 3rem;
-  line-height: 1;
-
-  @media (width <= 768px) {
-    font-size: 1.2rem;
-    margin-left: -8px;
-  }
-
-  a {
-    color: abstracts.$black;
-    transition: color 0.3s ease;
-
-    &:hover {
-      color: abstracts.$secondary;
-    }
-  }
 }
 
 .footer-container {
@@ -48,35 +22,48 @@
   align-items: center;
   padding-top: 1rem;
   padding-bottom: 1rem;
+
+  i {
+    font-size: 2rem;
+  }
+  a {
+    display: inline-block;
+    font-size: 1.125rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.15s ease-in-out;
+    color: abstracts.$black;
+    &:hover {
+      color: abstracts.$secondary;
+      text-decoration: none;
+    }
+  }
 }
 
 .footer-menu {
   list-style: none;
   display: flex;
-  align-items: center; // Asegura que todo esté centrado verticalmente
-  gap: 2rem; // Espaciado entre los elementos del menú
+  align-items: center;
+  gap: 2rem;
   margin: 0;
   padding: 0;
   overflow-x: auto;
+}
 
-  li {
-    a {
-      display: inline-block;
-      font-size: 1.125rem; // text-lg
-      font-weight: 500; // font-medium
-      text-decoration: none;
-      transition: all 0.15s ease-in-out;
-      color: var(--text-color);
+.footer-logo {
+  font-family: abstracts.$font-family-righteous;
+  line-height: 1;
 
-      &:hover {
-        color: var(--secondary-color);
-        text-decoration: underline;
-      }
-    }
+  a {
+    font-size: 2rem;
+    color: abstracts.$black;
   }
 }
-// Estilos específicos para los iconos de redes sociales
-
+/*
+  ######################################################################################
+  Footer UOC
+  ######################################################################################
+*/
 .blue {
   background-color: abstracts.$uoc;
 }
