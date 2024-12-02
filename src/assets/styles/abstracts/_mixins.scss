@@ -20,7 +20,7 @@
   padding: vars.$card-padding-y vars.$card-padding-x;
   border: vars.$card-border-width solid vars.$card-border-color;
   border-radius: vars.$card-radius;
-  background-color: transparent;
+
   box-shadow: vars.$card-shadow-offset vars.$card-shadow-offset
     vars.$card-shadow-blur vars.$card-shadow-color;
   transition: transform 0.2s ease, box-shadow 0.2s ease;

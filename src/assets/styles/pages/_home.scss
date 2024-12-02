@@ -159,7 +159,7 @@
 .cian-card {
   margin-right: 0;
   grid-column: 10 / span 3;
-  background-color: abstracts.$terciary;
+  background-color: abstracts.$terciary ;
 
   @include abstracts.card;
 
