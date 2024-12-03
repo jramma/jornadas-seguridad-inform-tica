@@ -1,0 +1,77 @@
+.
+├── estructura2.txt
+├── estructura.txt
+├── netlify.toml
+├── output.txt
+├── package.json
+├── package-lock.json
+├── README.md
+└── src
+    ├── assets
+    │   ├── fonts
+    │   ├── images
+    │   │   ├── concurso1.webp
+    │   │   ├── concurso2.webp
+    │   │   ├── favicon
+    │   │   │   ├── about.txt
+    │   │   │   ├── android-chrome-192x192.png
+    │   │   │   ├── android-chrome-512x512.png
+    │   │   │   ├── apple-touch-icon.png
+    │   │   │   ├── favicon-16x16.png
+    │   │   │   ├── favicon-32x32.png
+    │   │   │   ├── favicon.ico
+    │   │   │   └── site.webmanifest
+    │   │   ├── head1.webp
+    │   │   ├── head2.webp
+    │   │   ├── head3.webp
+    │   │   ├── head4.webp
+    │   │   ├── head5.webp
+    │   │   ├── head6.webp
+    │   │   ├── logo.png
+    │   │   ├── logo.webp
+    │   │   ├── masakaze-kawakami-kknrCfZHsyo-unsplash.jpg
+    │   │   ├── maximalfocus-HakTxidk36I-unsplash.jpg
+    │   │   ├── pathum-danthanarayana-t8TOMKe6xZU-unsplash.jpg
+    │   │   └── photo-1521939094609-93aba1af40d7.avif
+    │   ├── scripts
+    │   │   └── main.js
+    │   └── styles
+    │       ├── abstracts
+    │       │   ├── _index.scss
+    │       │   ├── _mixins.scss
+    │       │   └── _variables.scss
+    │       ├── base
+    │       │   ├── _reset.scss
+    │       │   └── _typography.scss
+    │       ├── components
+    │       │   └── _card.scss
+    │       ├── layouts
+    │       │   ├── _footer.scss
+    │       │   └── _header.scss
+    │       ├── main.scss
+    │       └── pages
+    │           ├── _four.scss
+    │           ├── _global.scss
+    │           ├── _home.scss
+    │           ├── _three.scss
+    │           └── _two.scss
+    ├── components
+    │   ├── button.html
+    │   ├── card.html
+    │   ├── grid.html
+    │   ├── list.html
+    │   ├── made.html
+    │   ├── post.html
+    │   ├── social.html
+    │   └── speakers.html
+    ├── four.html
+    ├── index.html
+    ├── scripts
+    │   └── main.js
+    ├── three.html
+    ├── two.html
+    └── views
+        ├── footer.html
+        └── header.html
+
+16 directories, 59 files
