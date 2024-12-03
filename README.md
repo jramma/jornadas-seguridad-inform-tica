@@ -16,31 +16,40 @@ Un proyecto retro-inspirado diseñado como parte de un ejercicio académico para
 
 ## 📂 Estructura del Proyecto
 
+La estructura del directorio del proyecto es la siguiente:
+
 ```
 src/
-├── index.html             # Página principal
-├── pages/                 # Páginas adicionales
-│   ├── about.html         # Ejemplo de página "Sobre Nosotros"
-│   ├── contact.html       # Página de contacto
-├── components/            # Componentes reutilizables
-│   ├── header.html        # Encabezado
-│   ├── footer.html        # Pie de página
-├── styles/
-│   ├── abstracts/         # Variables, mixins, funciones
-│   │   ├── _variables.scss
-│   │   ├── _mixins.scss
-│   ├── base/              # Estilos globales y resets
-│   │   ├── _reset.scss
-│   ├── components/        # Botones, tarjetas, formularios
-│   │   ├── _button.scss
-│   │   ├── _card.scss
-│   ├── main.scss          # Punto de entrada principal
-├── scripts/               # Lógica de interactividad
-│   ├── main.js            # Archivo principal
-│   ├── modal.js           # Script para modales
-└── assets/                # Recursos estáticos
-    ├── images/            # Imágenes
-    ├── fonts/             # Fuentes personalizadas
+├── estructura.txt          # Descripción de la estructura del proyecto
+├── netlify.toml            # Archivo de configuración para el despliegue en Netlify
+├── output.txt              # Registros de salida o resultados
+├── package.json            # Metadatos y dependencias del proyecto
+├── package-lock.json       # Archivo de bloqueo para las dependencias de npm
+├── README.md               # Documentación del proyecto
+└── src                     # Archivos fuente
+  ├── assets                # Recursos estáticos
+  │   ├── fonts             # Archivos de fuentes
+  │   ├── images            # Archivos de imágenes
+  │   ├── scripts           # Archivos JavaScript
+  │   └── styles            # Archivos SCSS/CSS
+  ├── components            # Componentes HTML reutilizables
+  │   ├── button.html       # Componente de botón
+  │   ├── card.html         # Componente de tarjeta
+  │   ├── grid.html         # Componente de diseño de cuadrícula
+  │   ├── list.html         # Componente de lista
+  │   ├── made.html         # Componente de hecho
+  │   ├── post.html         # Componente de publicación
+  │   ├── social.html       # Componente de redes sociales
+  │   └── speakers.html     # Componente de ponentes
+  ├── four.html             # Página cuatro
+  ├── index.html            # Página principal
+  ├── scripts               # Archivos JavaScript
+  │   └── main.js           # Archivo JavaScript principal
+  ├── three.html            # Página tres
+  ├── two.html              # Página dos
+  └── views                 # Vistas HTML
+    ├── footer.html         # Vista del pie de página
+    └── header.html         # Vista del encabezado
 ```
 
 ## 🚀 Cómo Empezar

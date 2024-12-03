@@ -1,0 +1,33 @@
+.
+├── estructura.txt
+├── netlify.toml
+├── output.txt
+├── package.json
+├── package-lock.json
+├── README.md
+└── src
+    ├── assets
+    │   ├── fonts
+    │   ├── images
+    │   ├── scripts
+    │   └── styles
+    ├── components
+    │   ├── button.html
+    │   ├── card.html
+    │   ├── grid.html
+    │   ├── list.html
+    │   ├── made.html
+    │   ├── post.html
+    │   ├── social.html
+    │   └── speakers.html
+    ├── four.html
+    ├── index.html
+    ├── scripts
+    │   └── main.js
+    ├── three.html
+    ├── two.html
+    └── views
+        ├── footer.html
+        └── header.html
+
+10 directories, 22 files
