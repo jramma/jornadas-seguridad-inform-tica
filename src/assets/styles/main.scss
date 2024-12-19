@@ -12,3 +12,7 @@
 @use "pages/two";
 @use "pages/three";
 @use "pages/four";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
